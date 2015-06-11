@@ -1,0 +1,2 @@
+# mSL
+mIRC Scripting Language
