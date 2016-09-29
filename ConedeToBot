@@ -1,0 +1,12 @@
+; ConcedeToBot(<Nick>)
+; Allows you to become a back-up bot for another bot.
+; Won't run if the other bot is in the same channel.
+alias concedeToBot {
+  var %max = $comchan($1,0)
+  var %i = 1
+  while (%i <= %max) {
+    if ($comchan($1,%i) == $chan) return 1
+    inc %i
+  }
+  return 0
+}
